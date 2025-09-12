@@ -76,43 +76,64 @@
 // }
 
 
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// using namespace std;
 
-int main() {
-    int choice;
-    cout << "Choose a shape to find area:\n";
-    cout << "1. Circle\n";
-    cout << "2. Rectangle\n";
-    cout << "3. Triangle\n";
-    cout << "Enter your choice: ";
-    cin >> choice;
+// int main() {
+//     int choice;
+//     cout << "Choose a shape to find area:\n";
+//     cout << "1. Circle\n";
+//     cout << "2. Rectangle\n";
+//     cout << "3. Triangle\n";
+//     cout << "Enter your choice: ";
+//     cin >> choice;
 
-    switch (choice) {
-        case 1: {
-            float radius;
-            cout << "Enter radius of circle: ";
-            cin >> radius;
-            cout << "Area of Circle = " << 3.14 * radius * radius << endl;
-            break;
-        }
-        case 2: {
-            float length, breadth;
-            cout << "Enter length and breadth of rectangle: ";
-            cin >> length >> breadth;
-            cout << "Area of Rectangle = " << length * breadth << endl;
-            break;
-        }
-        case 3: {
-            float base, height;
-            cout << "Enter base and height of triangle: ";
-            cin >> base >> height;
-            cout << "Area of Triangle = " << 0.5 * base * height << endl;
-            break;
-        }
-        default:
-            cout << "Invalid choice!" << endl;
-    }
+//     switch (choice) {
+//         case 1: {
+//             float radius;
+//             cout << "Enter radius of circle: ";
+//             cin >> radius;
+//             cout << "Area of Circle = " << 3.14 * radius * radius << endl;
+//             break;
+//         }
+//         case 2: {
+//             float length, breadth;
+//             cout << "Enter length and breadth of rectangle: ";
+//             cin >> length >> breadth;
+//             cout << "Area of Rectangle = " << length * breadth << endl;
+//             break;
+//         }
+//         case 3: {
+//             float base, height;
+//             cout << "Enter base and height of triangle: ";
+//             cin >> base >> height;
+//             cout << "Area of Triangle = " << 0.5 * base * height << endl;
+//             break;
+//         }
+//         default:
+//             cout << "Invalid choice!" << endl;
+//     }
 
-    return 0;
-}
+//     return 0;
+// }
+
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     int a,b,c;
+//     cout<<"enter the value of a , b and c ";
+//     cin>>a>>b>>c;
+//     if(a<b && a<c){
+//      cout<<a<< " is the smallest number"; 
+//     }
+//     else if(b<a && b<c) {
+//        cout<<b<< " is the smallest number" ;
+//     } 
+//      else if(c<a && c<b) {
+//        cout<<c<< " is the smallest number" ;
+//     } 
+//     else{
+//         cout<<"all are eqaul";
+//     }
+//     return 0 ;
+// }
