@@ -58,7 +58,8 @@ void insertionatend(int num){
        newnode ->data = num ;
        newnode ->next = temp->next;
        newnode ->prev = temp;
-        newnode->next->prev = newnode;
+        temp->next->prev = newnode;
+        temp = newnode;
     }
 void display(){
     node*temp = head;
