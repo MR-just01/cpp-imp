@@ -10,15 +10,10 @@ class Reversedstring{
         top == -1;
     }
 
-    void push(char c ){
-        if (top < MAX-1){
-            // top = top+1;
-            arr[++top]=c;
-        }else{
-            cout<<"stack is full"<<endl;
-    
-        }
-    }
+    void push(char c) {
+    if (top < MAX - 1)
+        arr[++top] = c;
+}
 
 
 
