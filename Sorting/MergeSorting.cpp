@@ -7,7 +7,7 @@ void merge(int arr[] , int lb , int mid , int ub){
     int n2 = ub-mid;
 
     int l[n1] ,r[n2];
-/// copy the data to the temp arrays
+/// copying  the data to the temp arrays
 
     for(int i =0 ; i<n1 ; i++){
         l[i] = arr[lb + i];

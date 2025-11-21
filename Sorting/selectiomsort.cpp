@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-#define MAX =100
+#define MAX 100
 
 void selectionsort(int arr[],int n){
     for(int i=0 ; i<n-1 ; i++){
@@ -15,15 +15,28 @@ void selectionsort(int arr[],int n){
 }
 
 int main(){
-    int arr[] = {23,41,12,3,9};
-    int n = sizeof(arr);
+    int arr[MAX];
+    int n;
+    cout<<"enter the size of the array :";
+    cin>>n;
+     
+    cout<<"enter the elements in the array :";
+    for(int i =0 ; i<n ; i++){
+        cin>>arr[i];
+    }
 
-    
-    selectionsort(arr , n );
-    cout<<"sorted array: ";
+      selectionsort(arr , n );
+    // cout<<"elements of the array: ";
+    // for(int i =0 ; i<n ;i++){
+    //     cout<<arr[i] << " ";
+    // }
+
+     cout<<"sorted array: ";
     for(int i = 0 ; i<n ; i++){
         cout<<arr[i] << " ";
 
     }
+   
+   
     return 0;
 }

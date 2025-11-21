@@ -11,7 +11,7 @@ void push(int x){
     newnode ->data = x;
     newnode ->next = top ; 
     top = newnode;
-    cout<<x<<"is pushed to stack"<<endl;
+    cout<<x<<" is pushed to stack"<<endl;
 
 }
 
@@ -44,10 +44,11 @@ void pop(){
     else{
             node *temp = top ;
             while(temp!=NULL){
-                cout<<temp->data<< endl;
+                cout<<temp->data<<" ";
                 temp = temp->next;
 
             }
+       cout<<endl;       
     }
  }
 
@@ -61,10 +62,10 @@ void pop(){
     cout<<"3.peek"<<endl;
     cout<<"4.display"<<endl;
     cout<<"5.exit"<<endl;
-    cout<<"enter your choice : "<<endl;
+    cout<<"Enter your choice : "<<endl;
     cin>>choice;
     switch(choice){
-        case 1:
+    case 1:
         int num;
         cout<<"enter the number you wnat to push:";
         cin>>num;
@@ -74,15 +75,17 @@ void pop(){
     pop();
     break;
     case 3:
-    cout<<"top element is : " <<peek()<<endl;
+    cout<<"Top element is : ";
+    peek();
     break;
     case 4:
     display();
     break;
-    case 5:
+    case 5 :
     exit(0);
     default:
-    cout<<"invalid choice "<<endl;
+    cout<<"invalid input";
     }
+
     }
  }

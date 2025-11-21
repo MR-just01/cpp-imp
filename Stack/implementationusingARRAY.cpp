@@ -1,17 +1,17 @@
 #include <iostream>
 #include <stack>
+#define max 100
 using namespace std;
 class Stack
 {
 public:
-    int *arr;
+    int arr[max];
     int top;
     int size;
 
-    Stack(int size)
+    Stack()
     {
-        this->size = size;
-        arr = new int[size];
+    
         top = -1;
     }
     void push(int element)
@@ -61,6 +61,19 @@ public:
             return false;
         }
     }
+
+    void display(){
+        if (top==-1){
+            cout<<"stack is empty";
+        }
+        else {
+            cout<<"elements in the stack :";
+            for (int i = top ; i>-1 ; i--){
+                cout<<arr[i]<<" ";
+            }
+            cout<<endl;
+        }
+    }
 };
 
 int main()
@@ -69,17 +82,17 @@ int main()
     cout << "Enter the size of the stack: ";
     cin >> size;
 
-    Stack s(size);
+    Stack s;
     int choice, element;
 
     do
     {
-        cout << "\n==== Stack Menu ====\n";
         cout << "1. Push\n";
         cout << "2. Pop\n";
         cout << "3. Peek (Top Element)\n";
         cout << "4. Check if Empty\n";
-        cout << "5. Exit\n";
+        cout<<"5. Display\n ";
+        cout << "6. Exit\n";
         cout << "Enter your choice: ";
         cin >> choice;
 
@@ -103,12 +116,14 @@ int main()
                 cout << "Stack is not empty." << endl;
             break;
         case 5:
-            cout << "Exiting program..." << endl;
+           s.display();
             break;
+        case 6:
+          exit(0);
         default:
             cout << "Invalid choice! Try again." << endl;
         }
-    } while (choice != 5);
+    } while (choice != 6);
 
     return 0;
 }

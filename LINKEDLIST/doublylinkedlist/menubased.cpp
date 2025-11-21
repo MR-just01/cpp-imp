@@ -99,7 +99,7 @@ void deleteatend(){
 
 }
 
-deleteatspecific(int pos){
+ void deleteatspecific(int pos){
      if(head==NULL){
         cout<<"nothing to delete here!!  underflow condition trigered :)";
        

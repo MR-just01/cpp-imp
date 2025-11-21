@@ -1,51 +1,46 @@
 #include <iostream>
 using namespace std;
 
-void bubblesort(int arr[], int n)
+void bubblesort(int arr[], int size)
 {
-    for (int i = 0; i < n - 1; i++)
+    for (int i = 0; i < size - 1; i++)
     {
-        for (int j = 0; j <= n - i - 1; j++)
+        for (int j = 0; j <= size - i - 1; j++)
         {
             int temp;
-            if (arr[j] < arr[j + 1])
+            if (arr[j] > arr[j + 1])
             {
                 temp = arr[j];
                 arr[j] = arr[j + 1];
                 arr[j + 1] = temp;
             }
+           
         }
+      
     }
 }
 int main() {
     const int MAX = 67;
     int array[MAX];
-    int n;
+    int size;
+     
+    cout<<"enter the size of the array:";
+    cin >>size;
 
-    cout << "Enter the size of the array (max " << MAX << "): ";
-    if (!(cin >> n)) {
-        cerr << "Invalid input\n";
-        return 1;
-    }
-    if (n < 1 || n > MAX) {
-        cerr << "Size must be between 1 and " << MAX << "\n";
-        return 1;
-    }
-
-    cout << "Enter the elements in the array:\n";
-    for (int i = 0; i < n; ++i) {
+    cout << "Enter the elements in the array size";
+    for (int i = 0; i < size; ++i) {
         cin >> array[i];
     }
 
     cout << "Before sorting: ";
-    for (int i = 0; i < n; ++i)
+    for (int i = 0; i < size; ++i)
      cout << array[i] << " ";
     cout << '\n';
 
-    bubblesort(array, n);
+    bubblesort(array, size);
 
-    cout << "After sorting (descending): ";
-    for (int i = 0; i < n; ++i)
+    cout << "After sorting : ";
+    for (int i = 0; i < size; ++i)
      cout << array[i] << " ";
     cout << '\n';
 
