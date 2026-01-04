@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+int main(){
+int arr = [23 , 24,26, 45, 60 , 89];
+int low = arr[0];
+int high = arr[5];
+int mid , x
+x=60
+while(low<=high){
+mid = low+(high-low)/2;
+if(arr[mid] == x ){
+return mid;
+}
+else if(arr[mid] < x){
+low = mid+1;
+}
+else{
+high = mid-1;
+}
+return -1
+}
